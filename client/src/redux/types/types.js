@@ -1,0 +1,14 @@
+export const AUTH = 'AUTH';
+export const LOGOUT = 'LOGOUT';
+export const SAGA_REGISTER = 'SAGA_REGISTER';
+export const SAGA_LOGIN = 'SAGA_LOGIN';
+export const LOGIN = 'LOGIN';
+export const ALL_FILES = 'ALL_FILES';
+export const ADD_FILE = 'ADD_FILE';
+export const OPEN_DELETE_MODAL = 'OPEN_DELETE_MODAL';
+export const CLOSE_DELETE_MODAL = 'CLOSE_DELETE_MODAL';
+export const DELETE_FILE = 'DELETE_FILE';
+export const OPEN_EDIT_MODAL = 'OPEN_EDIT_MODAL';
+export const CLOSE_EDIT_MODAL = 'CLOSE_EDIT_MODAL';
+export const EDIT_FILE = 'EDIT_FILE';
+export const CHANGE_EDIT_INPUT = 'CHANGE_EDIT_INPUT';
