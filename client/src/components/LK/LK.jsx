@@ -159,7 +159,7 @@ function LK() {
       finalName[finalName.length - 1] === 'bmp' ||
       finalName[finalName.length - 1] === 'gif'
     ) {
-      return `/images/${name}`;
+      return `http://localhost:4000/images/${name}`;
     } else {
       return 'https://xn--90abhccf7b.xn--p1ai/800/600/https/fb.ru/misc/i/gallery/10783/1689212.jpg';
     }

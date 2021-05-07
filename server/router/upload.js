@@ -10,8 +10,8 @@ router.post('/', check, async (req, res) => {
     const oldName = file.name.split('.');
     const type = oldName[oldName.length - 1];
     const path = `${__dirname.replace(
-      'server/router',
-      '/client/'
+      'router',
+      ''
     )}/public/images/${name}.${type}`; 
     // const path = `${__dirname.replace(
     //   'router',

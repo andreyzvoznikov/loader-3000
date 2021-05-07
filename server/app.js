@@ -138,10 +138,7 @@ app.post('/deleteFile', check, async (req, res) => {
       user: req.session.user.id,
       _id: req.body.id,
     });
-    const pathToFile = `${__dirname.replace(
-      'server',
-      'client'
-    )}/public/images/${deleteFile.name}`;
+    const pathToFile = `${__dirname}/public/images/${deleteFile.name}`;
     await fs.unlink(pathToFile);
     return res.sendStatus(200);
   } catch (e) {
@@ -157,10 +154,7 @@ app.post('/editFile', async (req, res) => {
     const oldFileName = oldFile.name;
     const arrayOfNewName = name.split('.');
     const arrayOfOldName = oldFile.name.split('.');
-    const pathToFile = `${__dirname.replace(
-      'server',
-      'client'
-    )}/public/images/${oldFileName}`;
+    const pathToFile = `${__dirname}/public/images/${oldFileName}`;
     console.log(arrayOfNewName[arrayOfNewName.length - 1]);
     if (
       arrayOfNewName[arrayOfNewName.length - 1] ===
@@ -168,10 +162,7 @@ app.post('/editFile', async (req, res) => {
     ) {
       oldFile.name = name;
       await oldFile.save();
-      fs.rename(
-        pathToFile,
-        `${__dirname.replace('server', 'client')}/public/images/${oldFile.name}`
-      );
+      fs.rename(pathToFile, `${__dirname}/public/images/${oldFile.name}`);
       res.json(oldFile).status(200);
     } else if (
       arrayOfNewName[arrayOfNewName.length - 1] !==
@@ -184,18 +175,12 @@ app.post('/editFile', async (req, res) => {
       );
       oldFile.name = newName;
       await oldFile.save();
-      fs.rename(
-        pathToFile,
-        `${__dirname.replace('server', 'client')}/public/images/${oldFile.name}`
-      );
+      fs.rename(pathToFile, `${__dirname}/public/images/${oldFile.name}`);
       res.json(oldFile).status(200);
     } else {
       oldFile.name = `${name}.${arrayOfOldName[arrayOfOldName.length - 1]}`;
       await oldFile.save();
-      fs.rename(
-        pathToFile,
-        `${__dirname.replace('server', 'client')}/public/images/${oldFile.name}`
-      );
+      fs.rename(pathToFile, `${__dirname}/public/images/${oldFile.name}`);
       res.json(oldFile).status(200);
     }
   } catch (e) {
