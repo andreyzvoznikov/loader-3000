@@ -21,9 +21,6 @@ function Home() {
         три
       </Typography>
       <Typography variant="h1" component="h2">
-        мать его
-      </Typography>
-      <Typography variant="h1" component="h2">
         тысячи
       </Typography>
     </div>

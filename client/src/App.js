@@ -1,6 +1,6 @@
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { useEffect} from 'react';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';

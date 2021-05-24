@@ -66,9 +66,6 @@ function Header() {
               <Link to="/register" className={classes.link}>
                 <Button color="inherit">Регистрация</Button>
               </Link>
-              <Link to="/lk" className={classes.link}>
-                <Button color="inherit">Личный кабинет</Button>
-              </Link>
             </>
           )}
         </Toolbar>
